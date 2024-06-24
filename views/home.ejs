@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <div class="root">
+        <header>
+            <div id="username">
+                <%= user.name %>
+            </div>
+            <div class="link-div" id="Generate">
+                Generate
+            </div>
+            <div class="link-div" id="Analytics">
+                Analytics
+            </div>
+            <div class="link-div" id="Logout">
+                Logout
+            </div>
+        </header>
+        <main>
+            <div id="content">
+                <h1>URL SHORTENER</h1>
+                <div>
+                    <form id="myForm" method="POST" action="/url">
+                        <div id="inputField">
+                            <label for="urlField">Enter your original url: </label>
+                            <input type="text" id="urlField" class="required" name="url"
+                            placeholder="https://example.com" />
+                        </div>
+                        <br />
+                        <div>
+                            <button id="submitBtn" type="submit" disabled>Generate</button>
+                        </div>
+                    </form>
+                </div>
+                <% if (locals.id) { %>
+                    <div>
+                        <p>
+                            New URL : <span id="ShortId">http://localhost:8000/url/<%= id %></span>
+                        </p>
+                    </div>
+                <% } %>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="./js/home.js"></script>
+</html>

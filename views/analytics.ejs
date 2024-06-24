@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/analytics.css">
+</head>
+
+<body>
+    <header>
+        <div id="username">
+            <%= user.name %>
+        </div>
+        <div class="link-div" id="Generate">
+            Generate
+        </div>
+        <div class="link-div" id="Analytics">
+            Analytics
+        </div>
+        <div class="link-div" id="Logout">
+            Logout
+        </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Short Id</th>
+                    <th>Original Url</th>
+                    <th>Clicks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% urls.forEach((url, index)=> { %>
+                    <tr id="rows">
+                        <td>
+                            <%= index + 1 %>
+                        </td>
+                        <td>
+                            <%= url.shortUrl %>
+                        </td>
+                        <td>
+                            <%= url.originalUrl %>
+                        </td>
+                        <td>
+                            <%= url.history.length %>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+</body>
+<script src="./js/analytics.js"></script>
+
+</html>

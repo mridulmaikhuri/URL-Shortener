@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    height: 96vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(207, 71%, 78%);
+}
+#root {
+    width: fit-content;
+    background-color:seashell;
+    scale: 1.4;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 40vh;
+}
+h1 {
+    text-align: center;
+}
+#submitBtn {
+    background-color: blue;
+    color: white;
+    width: 15vw;
+    border:none;
+    height: 3vh;
+    cursor: pointer;
+    margin-top: 2vh;
+}
+input {
+    width: 14.5vw;
+    border: none;
+}
+#Signup {
+    margin-top: 3vh;
+    text-align: center;
+    color: blue;
+}
+#Signup:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
